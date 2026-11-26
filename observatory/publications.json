@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "source": "https://github.com/Talos-Labs-documents/talos-labs-documents.github.io/blob/main/index.html",
+  "source": "https://github.com/Talos-Labs-documents/talos-labs-documents.github.io/blob/8f6772063a95a110a36ccaed46d8b9a810398feb/index.html",
   "entries": [
     {
       "url": "https://taloslabs.substack.com/p/milestone-release-talos-labs-reproducible",
@@ -1142,5 +1142,23 @@
       "title": "⚡️ Enter the Lab: What TALOS is and Why You’re Here",
       "date": "2025-07-17T17:29:55.036Z"
     }
-  ]
+  ],
+  "relationships": [
+    {
+      "publication": "https://taloslabs.substack.com/p/milestone-release-talos-labs-reproducible",
+      "target": "https://github.com/Talos-Labs-documents/talos-milestone-release/tree/v1.0",
+      "type": "Direct link reported by portal"
+    },
+    {
+      "publication": "https://taloslabs.substack.com/p/working-sketch-a-human-centered-ai",
+      "target": "https://github.com/Talos-Labs-documents/talos",
+      "type": "Thematic connection"
+    },
+    {
+      "publication": "https://taloslabs.substack.com/p/the-problem-with-most-ideas-isnt",
+      "target": "https://github.com/Talos-Labs-documents/ocs-baseline-prototype",
+      "type": "Methodological connection"
+    }
+  ],
+  "relationshipProvenance": "Existing portal annotations; original articles not independently reviewed in this milestone."
 }
