@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "records": [
+    {
+      "id": "OCS-BASELINE-001",
+      "classification": "Executed synthetic experiment",
+      "question": "Can bounded candidate scheduling produce better declared outcomes than a greedy baseline?",
+      "method": "25 paired synthetic instances; lexicographic comparison before and after resource removal.",
+      "result": "Before: 7 better, 18 tied, 0 worse. After: 6 better, 18 tied, 1 worse.",
+      "limitations": "Tiny synthetic problems; candidate uses substantially more search and runtime; no general superiority established.",
+      "source": "https://github.com/Talos-Labs-documents/ocs-baseline-prototype/blob/e16b2ea002c2c510672ecf4d46f8d499c24cd180/README.md"
+    },
+    {
+      "id": "PSI-001-CONCEPT",
+      "classification": "Conceptual hypothesis",
+      "question": "Can coordinated infrastructure planning outperform independent subsystem optimization while preserving reliability and welfare?",
+      "method": "Proposed paired synthetic region comparison under identical conditions.",
+      "result": "The inspected conceptual README contains no measured outcome.",
+      "limitations": "This record covers the conceptual document only, not subsequent experiment releases.",
+      "source": "https://github.com/Open-Inquiry-Initiative/planetary-systems-integration/blob/3f39a703038d6baae419a5e5acf16f1ed31e4c8d/README.md"
+    }
+  ]
+}
