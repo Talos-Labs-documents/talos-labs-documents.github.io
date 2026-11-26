@@ -14,3 +14,6 @@ Executed adapter logic from fetched GitHub source in a JavaScript isolate, remov
 - partial failure: FAIL Error: assertion
 
 Reality OS runtime integration remains pending.
+
+## Environment diagnosis
+The isolate has no URL, AbortSignal or fetch globals. Four failed checks are environment-blocked; offline and rejection passes may be vacuous where those missing globals cause early rejection. Do not interpret this run as adapter qualification. Run the unchanged ES module test in Node 20+ before making code changes. No adapter defect established.
