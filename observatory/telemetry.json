@@ -1,0 +1,7 @@
+{
+  "schemaVersion": 1,
+  "mode": "not-connected",
+  "asOf": null,
+  "events": [],
+  "notice": "No approved Hydra worker telemetry has been exported. Empty events do not imply zero workers or zero activity."
+}
