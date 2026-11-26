@@ -1,0 +1,3 @@
+# OII-VIS-014 — Browser runtime activation
+
+Executed Playwright with system Chromium `/usr/bin/chromium`, version 144.0.7559.96, using a synthetic HTML heading. Browser launch and DOM read passed. Node v22.16.0 also confirmed. `git ls-remote` against website repository failed: Could not resolve host github.com. Existing browser-check.py retrieved through connector and reviewed; it defaults to Playwright-managed Chromium rather than system executable. Actual observatory browser harness not executed. No desktop/mobile, search, failure recovery or deployment pass claimed. Next: transfer exact checkout into browser runtime, verify blobs, allow explicit Chromium executable override, run existing harness and preserve results. No production changes.
