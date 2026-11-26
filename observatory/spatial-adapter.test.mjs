@@ -1,0 +1,15 @@
+import {normalize,loadObservatory} from './spatial-adapter.mjs';
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+const kinds=['evidence','publications','telemetry'];
+const fixtures=Object.fromEntries(await Promise.all(kinds.map(async k=>[k,JSON.parse(await readFile(new URL(k+'.json',import.meta.url),'utf8'))])));
+for(const k of kinds)assert.doesNotThrow(()=>normalize(k,fixtures[k]));
+assert.equal(normalize('telemetry',fixtures.telemetry).workerCount,null);
+assert.throws(()=>normalize('telemetry',{...fixtures.telemetry,events:[{}]}));
+assert.throws(()=>normalize('evidence',{schemaVersion:2}));
+assert.throws(()=>normalize('publications',{...fixtures.publications,entries:[...fixtures.publications.entries,fixtures.publications.entries[0]]}));
+const loaded=await loadObservatory(async url=>({ok:true,json:async()=>fixtures[url.split('/').pop().replace('.json','')]}));
+assert.ok(kinds.every(k=>loaded[k].status==='available'));
+const failed=await loadObservatory(async()=>{throw Error('offline')});
+assert.ok(kinds.every(k=>failed[k].status==='unavailable'&&failed[k].data===null));
+console.log('Adapter fixture and failure checks passed');
